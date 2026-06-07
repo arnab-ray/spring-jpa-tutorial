@@ -22,7 +22,7 @@ public class User extends BaseEntity {
 
     private String lastName;
 
-    private String email;
+    private String emailId;
 
     private String phoneNumber;
 
