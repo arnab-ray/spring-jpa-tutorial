@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
-@Transactional(readOnly = true)
 public class UserService {
 
     private final UserRepository userRepository;
@@ -30,6 +29,7 @@ public class UserService {
         }
     }
 
+    @Transactional(readOnly = true)
     public UserDetailsResponse getUser(Long userId) {
         var maybeUser = userRepository.findById(userId);
 
